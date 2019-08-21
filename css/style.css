@@ -408,6 +408,7 @@ footer .container .contacts {
         right: 0;
         left: 0;
         bottom: 45%;
+        height: 48vh;
         text-align: right;
         background-color: rgba(0, 0, 0, 0.32);
     }
@@ -419,6 +420,7 @@ footer .container .contacts {
 
     .myWorkItem {
         height: 250px;
+        margin: 15px auto;
     }
 
     .myWorkTitle {
