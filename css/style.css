@@ -26,28 +26,7 @@ h2::after {
     transform: translateX(50%);
 }
 
-header .caption {
-    position: absolute;
-    top: 10%;
-    right: 5%;
-    text-align: right;
-    
-}
-
-header .caption h1{
-    font-size: 52px;
-    line-height: 58px; 
-    margin-bottom: 20px;
-    color: #f2f2f2;
-}
-
-header .caption .description{
-    font-size: 36px;
-    line-height: 36px; 
-    color: #c3c3c3;
-}
-
-header {
+.header {
     background-image: url(../images/bgrHeader.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -56,11 +35,28 @@ header {
     margin-left: 260px;
 }
 
-main {
-    margin-left: 260px;
+.header__caption {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    text-align: right;
+    
 }
 
-aside {
+.header__title{
+    font-size: 52px;
+    line-height: 58px; 
+    margin-bottom: 20px;
+    color: #f2f2f2;
+}
+
+.header__description{
+    font-size: 36px;
+    line-height: 36px; 
+    color: #c3c3c3;
+}
+
+.aside {
     position: fixed;
     width: 260px;
     top: 0;
@@ -70,7 +66,7 @@ aside {
     border-right: 1px solid #f1f1f1; 
 }
 
-aside .container {
+.aside__content {
     display: flex;
     flex-direction: column;  
     align-items: center;
@@ -79,32 +75,29 @@ aside .container {
     padding: 44px 40px 20px 40px;   
 }
 
-aside .container .logo{
+.aside__logo{
     border: 5px solid #393939;
     border-radius: 50%;
     padding: 35px;
 }
 
-aside .container .logo img{
+.aside__img{
     max-width: 90px;
 } 
 
-aside hr {
+.aside__line {
     width: 115px;
+    border-bottom: 1px solid #8d8d8d;
 }
-aside .container span{
-    font-size: 22px;
-    font-weight: 200;
-    letter-spacing: 0px;
-}
-aside .container .contacts li{
+
+.aside__item{
     position: relative;
     padding-bottom: 25px;
     text-decoration: none;
     text-align: center;
 }
 
-aside .container .contacts li a {    
+.aside__link {    
     font-size: 16px;
     line-height: 32px;
     color: #8d8d8d;
@@ -113,12 +106,12 @@ aside .container .contacts li a {
     transition: .3s;
 }
 
-aside .container .contacts a:hover {
+.aside__link:hover {
     color: #393939;
     transition: .3s;
 }
 
-aside .container .contacts a::after {    
+.aside__link::after {    
     position: absolute;
     content: "";
     top: 42px;
@@ -134,11 +127,15 @@ aside .container .contacts a::after {
     transform: translateX(50%);
 }
 
-.aboutUs{
+main {
+    margin-left: 260px;
+}
+
+.aboutus{
     padding-top: 45px;
 }
 
-.aboutUs h3{
+.aboutus__subtitle{
     position: relative;
     margin-top: 0;
     font-size: 22px;
@@ -149,7 +146,7 @@ aside .container .contacts a::after {
     text-align: center;
 }
 
-.aboutUs h3::after {    
+.aboutus__subtitle::after {    
     position: absolute;
     content: "";
     top: 45px;
@@ -162,67 +159,57 @@ aside .container .contacts a::after {
     transform: translateX(50%);
 }
 
-.aboutUs h4{    
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 200;
-    letter-spacing: 1px;
-    margin-top: 10px;
-    padding-bottom: 10px;
-    text-transform: uppercase;
-    text-align: center;
-}
-.aboutUs .aboutUsItem{
+.aboutus__item{
     margin-bottom: 60px;
 }
 
-.aboutUs .education{
+.aboutus__education{
     margin: 0 auto 25px;
     max-width: 660px;
 }
 
-.aboutUs .education li span{
+.aboutus__description{
     margin-right: 5px;
 }
 
-.aboutUs .education li,
-.aboutUs .languages li{
+.aboutus__subitem{
     line-height: 28px;
 }
 
-.aboutUs .languages{
+.aboutus__languages{
     margin: 0 auto 25px;
     text-align: center;
 }
 
-.aboutUs .skills{
+.aboutus__skills{
     margin: 0 auto 25px;
     max-width: 660px;
 }
 
-.aboutUs .skills li{    
+.aboutus__skills .aboutus__subitem{    
     margin: 15px 0;
     list-style: none;
+    line-height: inherit;
 }
 
-.aboutUs .workExperiennce {
+.aboutus__workExperiennce {
     text-align: center;
 }
 
-.aboutUs .workExperiennce .item{
+.aboutus__sublist{
     margin-bottom: 15px;
 }
-.myWork {
+.mywork {
     background-color: #f2f2f2;
 }
 
-.myWork ul{
+.mywork__list{
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 0;
 }
 
-.myWorkItem {
+.mywork__item {
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center top;
@@ -238,11 +225,11 @@ aside .container .contacts a::after {
     border: 3px solid #fff;
 }
   
-.myWorkItem:hover .myWorkHover {
+.mywork__item:hover .mywork__hover {
     opacity: 1;
 }
   
-.myWorkTitle {
+.mywork__subtitle {
     font-size: 36px;
     font-weight: 600;
     line-height: 1;
@@ -252,7 +239,7 @@ aside .container .contacts a::after {
     margin: 0;
 }
   
-.myWorkHover {
+.mywork__hover {
     position: absolute;
     top: 0;
     right: 0;
@@ -273,28 +260,28 @@ aside .container .contacts a::after {
     flex-direction: column;
 }
   
-.myWorkHover:hover {
+.mywork__hover:hover {
     color: #fff;
     text-decoration: none;
 }
 
-.myWorkHover a{
+.mywork__hover a{
     z-index: 999;
 }
 
-.myWorkHover .myWorkTitle {
+.mywork__subtitle {
     border: 0;
     max-width: 80%;
     padding: 0;
 }
   
-.myWorkHover .myWorkText {
+.mywork__text {
     max-width: 80%;
     margin: 0;
 } 
   
-.myWorkHover .myWorkText:before,
-.myWorkHover .myWorkText:after {
+.mywork__text:before,
+.mywork__text:after {
     content: '';
     display: block;
     margin: 20px auto;
@@ -303,19 +290,19 @@ aside .container .contacts a::after {
     background-color: #fff;
 }
   
-.myWorkHover .myWorkBtn {
+.mywork__btn {
     padding: 0;
     border: none;
     color: #fff;
 }
 
-.myWorkHover .btn:hover,
-.myWorkHover .btn:active,
-.myWorkHover .btn:focus {
+.btn:hover,
+.btn:active,
+.btn:focus {
     background-color: transparent;
 }
   
-.myWorkHover:after {
+.mywork__hover:after {
     content: '';
     position: absolute;
     top: 25px;
@@ -325,48 +312,48 @@ aside .container .contacts a::after {
     border: 2px solid #feffff;
 }
 
-footer {    
+.footer {    
     margin-left: 260px;
     background-color: #494848;
     padding: 20px 0;
 }
 
-footer .container .contacts {
+.footer__contacts {
     display: none;
 }
 
 @media screen and (max-width: 991px){
-    header,
+    .header,
     main,
-    footer {
+    .footer {
         margin-left: 0px;
     }
 
-    aside {
+    .aside {
         display: none;
     }
 
-    .aboutUs{
+    .aboutus{
         margin-left: 10px;
         margin-right: 10px;
     }
 
-    .myWorkItem {
+    .mywork__item {
         width: 80%;
     }
 
-    footer .container .contacts {
+    .footer__contacts {
         display: block;
     }
 
-    footer .container .contacts li{
+    .footer__item {
         position: relative;
         padding-bottom: 25px;
         text-decoration: none;
         text-align: center;
     }
     
-    footer .container .contacts li a {    
+    .footer__link {    
         font-size: 16px;
         line-height: 32px;
         color: #8d8d8d;
@@ -375,12 +362,12 @@ footer .container .contacts {
         transition: .3s;
     }
     
-    footer .container .contacts a:hover {
+    .footer__link:hover {
         color: #f2f2f2;
         transition: .3s;
     }
     
-    footer .container .contacts a::after {    
+    .footer__link::after {    
         position: absolute;
         content: "";
         top: 42px;
@@ -398,52 +385,56 @@ footer .container .contacts {
 }
   
 @media screen and (max-width: 576px){
-    header {
+    .header {
         height: 55vh;
     }
 
-    header .caption {        
-        padding: 20px;
+    .header__caption {        
+        padding: 0px;
         top: 0;
         right: 0;
         left: 0;
-        bottom: 48%;
-        height: 48vh;
+        bottom: calc(100% - 55vh);
         text-align: right;
         background-color: rgba(0, 0, 0, 0.32);
     }
 
-    header .caption .description {
+    .header__title {
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+    .header__description {
         font-size: 32px;
+        margin-right: 20px;
         color: #ffffff;
     }
 
-    .aboutUs .languages {
+    .aboutus__languages {
         text-align: left;
     }
 
-    .aboutUs .workExperiennce {
+    .aboutus__workExperiennce {
         text-align: left;
     }
 
-    .myWorkItem {
+    .mywork__item {
         height: 250px;
         margin: 15px auto;
     }
 
-    .myWorkTitle {
+    .mywork__subtitle {
         font-size: 22px;    
     }
 
-    .myWorkHover .myWorkTitle {
+    .mywork__subtitle {
         max-width: 98%;
     }
 
-    .myWorkHover .myWorkText {
+    .mywork__text {
         max-width: 90%;
     }
 
-    .myWorkHover .myWorkBtn {
+    .mywork__btn {
         padding: 0;
         border: none;
         color: #fff;
